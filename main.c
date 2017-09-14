@@ -4,7 +4,7 @@
 
 void temp(double num, char type)
 {
-    if(type=='C')
+    if(type=='C'){
         if(num<=-273.15)
             printf("Impossible");
         else
@@ -14,6 +14,7 @@ void temp(double num, char type)
             printf("%.2f F\n",far);
             printf("%.2f K\n",kelv);
         }
+    }
     else if(type=='F')
         if(num<=-459.67)
             printf("Impossible");
@@ -24,7 +25,7 @@ void temp(double num, char type)
             printf("%.2f F\n",grad);
             printf("%.2f K\n",kelv);
         }
-    else if(type=='K')
+    else if(type=='K'){
         if(num<=0)
             printf("Impossible");
         else
@@ -34,6 +35,7 @@ void temp(double num, char type)
             printf("%.2f F\n",grad);
             printf("%.2f K\n",far);
         }
+    }
 
 }
 
