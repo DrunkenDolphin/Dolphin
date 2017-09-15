@@ -4,7 +4,7 @@
 
 void temp(double num, char type)
 {
-	if (type == 'C') {
+	if (type == 'C'||type=='c') {
 		if (num <= -273.15)
 			printf("Impossible");
 		else
@@ -15,7 +15,7 @@ void temp(double num, char type)
 			printf("%.2f K\n", kelv);
 		}
 	}
-	else if (type == 'F')
+	else if (type == 'F'||type=='f')
 		if (num <= -459.67)
 			printf("Impossible");
 		else
@@ -25,7 +25,7 @@ void temp(double num, char type)
 			printf("%.2f C\n", grad);
 			printf("%.2f K\n", kelv);
 		}
-	else if (type == 'K') {
+	else if (type == 'K'||type=='k') {
 		if (num <= 0)
 			printf("Impossible");
 		else
@@ -36,6 +36,8 @@ void temp(double num, char type)
 			printf("%.2f F\n", far);
 		}
 	}
+	else
+    printf("Type must be K,F or C");
 
 }
 
@@ -56,6 +58,8 @@ int main(int argc, char* argv[])
 		double num = atof(argv[1]);
 		temp(num, *argv[2]);
 	}
+	 else if(argc!=2&&argc!=3)
+        printf("Wrong values");
 	return 0;
 }
 
